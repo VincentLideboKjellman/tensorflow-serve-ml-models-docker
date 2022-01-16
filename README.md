@@ -16,7 +16,7 @@ Change Users/server to your path where you cloned the repository
 
 install dependencies with pip install
 
-run: python3 predict.py to call on the endpoint when docker is running
+run: python predict.py to call on the endpoint when docker is running
 
 
 
