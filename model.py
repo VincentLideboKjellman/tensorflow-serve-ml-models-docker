@@ -40,3 +40,6 @@ model.add(Flatten())
 model.add(Dense(50, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(n_classes, activation='softmax'))
+
+# define loss and optimizer
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
