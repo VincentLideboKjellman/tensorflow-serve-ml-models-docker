@@ -13,4 +13,5 @@ docker run -p 8501:8501 --name tfserving_classifier \
 
 Change Users/server to your path where you cloned the repository
 
-run: python3 predict.py to call on the endpoint
+install dependencies with pip install
+run: python3 predict.py to call on the endpoint when docker is running
