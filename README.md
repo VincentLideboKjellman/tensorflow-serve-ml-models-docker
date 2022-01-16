@@ -5,6 +5,7 @@ Serve a ML model with Tensorflow serving with docker
 How to run:
 
 install python
+
 install docker
 
 docker run -p 8501:8501 --name tfserving_classifier \
@@ -14,4 +15,5 @@ docker run -p 8501:8501 --name tfserving_classifier \
 Change Users/server to your path where you cloned the repository
 
 install dependencies with pip install
+
 run: python3 predict.py to call on the endpoint when docker is running
