@@ -55,3 +55,6 @@ print('Accuracy: %.3f' % acc)
 ts = int(time.time())
 file_path = f"./img_classifier/{ts}/"
 model.save(filepath=file_path, save_format='tf')
+
+
+# 
