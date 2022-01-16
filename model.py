@@ -23,3 +23,20 @@ x_test = x_test.reshape((x_test.shape[0], x_test.shape[1], x_test.shape[2], 1))
 # normalize pixel values
 x_train = x_train.astype('float32') / 255.0
 x_test = x_test.astype('float32') / 255.0
+
+# set input image shape
+input_shape = x_train.shape[1:]
+
+# set number of classes
+n_classes = len(unique(y_train))
+
+# define model
+model = Sequential()
+model.add(Conv2D(64, (3,3), activation='relu', input_shape=input_shape))
+model.add(MaxPool2D((2, 2)))
+model.add(Conv2D(32, (3,3), activation='relu'))
+model.add(MaxPool2D((2, 2)))
+model.add(Flatten())
+model.add(Dense(50, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(n_classes, activation='softmax'))
